@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/activity_custom_action_bar">
+    </include>
+
+    <ScrollView
+        android:id="@+id/sv_cntainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/euclid_bold"
+                android:gravity="center"
+                android:text="Dashboard"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+
+                android:id="@+id/rlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.androidplot.pie.PieChart
+                    android:id="@+id/pieChart"
+                    style="@style/APDefacto.Light"
+                    android:layout_width="225dp"
+                    android:layout_height="225dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="90dp"
+                    android:fontFamily="@font/redhat_bold"
+                    android:text="Total"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/segoe_ui"
+                    android:text="2h 40m"
+                    android:textColor="#000000"
+                    android:textSize="27dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="51dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/classc"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@color/classt"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/classn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Class"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/classn"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/redhat_bold"
+                        android:text="1h 20m"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/studyc"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@color/studyt"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/studyn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Study"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/studyn"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/redhat_bold"
+                        android:text="20m"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/freetimec"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@color/freetimet"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/freetimen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Free-time"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/freetimen"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/redhat_bold"
+                        android:text="20m"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="15dp"
+                android:background="#3D000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/euclid_bold"
+                android:text="Free-time Usage"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/usedt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Used"
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/usedt"
+                        android:text="30m"
+                        android:textColor="#0C8722"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:id="@+id/Maxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="Max"
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Maxt"
+                        android:text="2h"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/probar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="370dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="17dp"
+                android:progressDrawable="@drawable/custom_progress" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="286dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="22dp"
+                android:text="Extend Free-time"
+                android:textAllCaps="false"
+                android:textColor="#2F80ED"
+                app:iconTint="#2F80ED"
+                app:strokeColor="#2F80ED"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Change Time Restrictions"
+                android:textAllCaps="false"
+                android:textColor="#2B73DE"
+                android:fontFamily="@font/segoe_ui"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="#3D000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By Devices"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:fontFamily="@font/seguisb"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="28dp"
+                    android:layout_height="59dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="55dp"
+                    app:srcCompat="@drawable/phones" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="68dp">
+
+                    <TextView
+                        android:id="@+id/aphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seguisb"
+                        android:text="Adi’s Phone"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="38dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="40m"
+                        android:textColor="#3D7FE0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+
+                    android:layout_width="82dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="26dp"
+                    app:srcCompat="@drawable/laptop" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp">
+
+                    <TextView
+                        android:id="@+id/alap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/seguisb"
+                        android:text="Adi’s Laptop"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="38dp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:text="1h 30m"
+                        android:textColor="#3D7FE0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:background="@android:color/transparent"
+                android:text="See All Devices"
+                android:textAllCaps="false"
+                android:textColor="#2B73DE"
+                android:fontFamily="@font/segoe_ui"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
